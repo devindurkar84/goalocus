@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      # AGP, Kotlin, KSP and Hilt must move together; review these as one PR.
+      build-toolchain:
+        patterns:
+          - "com.android*"
+          - "org.jetbrains.kotlin*"
+          - "com.google.devtools.ksp*"
+          - "com.google.dagger*"
+      androidx:
+        patterns:
+          - "androidx.*"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

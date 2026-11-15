@@ -1,0 +1,20 @@
+name: Check content links
+
+on:
+  schedule:
+    - cron: "30 3 * * 1" # Mondays 09:00 IST
+  pull_request:
+    paths: ["content/**"]
+  workflow_dispatch:
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check reference links in lessons
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 403/429: some sites (LeetCode, OpenAI) block bots; only real 404s should fail.
+          args: --no-progress --max-retries 2 --accept 200,206,403,429 "content/**/*.md"
+          fail: true

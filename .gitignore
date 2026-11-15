@@ -1,0 +1,26 @@
+# Gradle / Android Studio
+.gradle/
+build/
+.kotlin/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing and secrets — never commit
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

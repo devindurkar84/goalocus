@@ -1,0 +1,92 @@
+# One-line definitions shown when the S Pen hovers over a term (and used before asking the AI).
+# Keep each definition under 200 characters.
+
+[[terms]]
+term = "Process"
+definition = "A running program with its own virtual address space, open files and at least one thread."
+topic = "sys.os.processes-threads"
+
+[[terms]]
+term = "Thread"
+definition = "An independent flow of execution inside a process. Threads share the process's memory but each has its own stack, registers and program counter."
+topic = "sys.os.processes-threads"
+
+[[terms]]
+term = "Context switch"
+definition = "The CPU saving one thread's state and restoring another's so a different thread can run."
+topic = "sys.os.processes-threads"
+
+[[terms]]
+term = "Copy-on-write"
+definition = "Sharing memory pages between processes until one of them writes, at which point that page is copied. Makes fork() cheap."
+topic = "sys.os.processes-threads"
+
+[[terms]]
+term = "Encapsulation"
+definition = "Each network layer wrapping the data from the layer above with its own header before passing it down."
+topic = "sys.net.tcp-ip-model"
+
+[[terms]]
+term = "Port"
+definition = "A 16-bit number that identifies which process on a host a TCP or UDP packet is for."
+topic = "sys.net.tcp-ip-model"
+
+[[terms]]
+term = "L4 vs L7"
+definition = "Layer 4 devices route by IP and port only; layer 7 devices understand the application protocol (e.g., HTTP paths and headers)."
+topic = "sys.net.tcp-ip-model"
+
+[[terms]]
+term = "RTT"
+definition = "Round-trip time: how long a message takes to reach the other side and for the reply to come back."
+topic = "sys.net.tcp-handshake"
+
+[[terms]]
+term = "SYN flood"
+definition = "An attack that sends many SYNs without completing handshakes, filling the server's queue of half-open connections."
+topic = "sys.net.tcp-handshake"
+
+[[terms]]
+term = "Availability zone"
+definition = "One or more isolated data centers inside a cloud region, with independent power, cooling and networking."
+topic = "sys.cloud.regions-zones"
+
+[[terms]]
+term = "RPO"
+definition = "Recovery point objective: the most data you can afford to lose, measured in time (e.g., the last 5 minutes)."
+topic = "sys.cloud.regions-zones"
+
+[[terms]]
+term = "RTO"
+definition = "Recovery time objective: how long the service may be down before it must be restored."
+topic = "sys.cloud.regions-zones"
+
+[[terms]]
+term = "Big-O"
+definition = "How an algorithm's cost grows with input size n, ignoring constant factors and smaller terms."
+topic = "dsa.foundations.big-o"
+
+[[terms]]
+term = "Amortised cost"
+definition = "The average cost per operation over a long sequence, even if a few operations are expensive (e.g., array resizing)."
+topic = "dsa.foundations.big-o"
+
+[[terms]]
+term = "Two pointers"
+definition = "Moving two indexes through a sequence so each step rules out many candidates, often turning O(n²) into O(n)."
+topic = "dsa.patterns.two-pointers"
+
+[[terms]]
+term = "Token"
+definition = "The unit an LLM reads and writes: a chunk of text (a word, part of a word, or bytes) from the model's fixed vocabulary."
+topic = "ai.llm.tokens"
+
+[[terms]]
+term = "BPE"
+definition = "Byte-pair encoding: builds a token vocabulary by repeatedly merging the most frequent adjacent pair of symbols."
+topic = "ai.llm.tokens"
+
+[[terms]]
+term = "Context window"
+definition = "The maximum number of tokens (prompt plus output) a model can handle in one request."
+topic = "ai.llm.tokens"

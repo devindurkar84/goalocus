@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Goalocus</string>
+
+    <string name="home_up_next_title">Up next</string>
+    <string name="home_device_title">Phone setup</string>
+    <string name="home_phase_current">%1$s · until %2$s</string>
+    <plurals name="home_journey_starts_in">
+        <item quantity="one">Your journey starts on %1$s — in %2$d day</item>
+        <item quantity="other">Your journey starts on %1$s — in %2$d days</item>
+    </plurals>
+    <string name="home_journey_done">Journey complete. Time for interviews.</string>
+    <string name="home_topic_meta">%1$s · %2$d min · interview weight %3$d/5</string>
+    <string name="home_pack_summary">%1$d topics · %2$d questions · content pack %3$s</string>
+    <string name="home_load_failed">Couldn\'t load lessons</string>
+    <string name="action_retry">Try again</string>
+
+    <string name="strand_systems">Systems</string>
+    <string name="strand_algorithms">Algorithms</string>
+    <string name="strand_intelligence">AI and ML</string>
+
+    <string name="capability_notifications">Notifications</string>
+    <string name="capability_exact_alarms">On-time reminders</string>
+    <string name="capability_focus_modes">Focus mode (grayscale)</string>
+    <string name="capability_live_updates">Now Bar timer</string>
+    <string name="capability_nfc">NFC desk tag</string>
+    <string name="capability_accessibility">App blocking</string>
+    <string name="capability_usage_access">Usage stats</string>
+    <string name="capability_health_connect">Sleep from Health Connect</string>
+    <string name="capability_on_device_ai">On-device AI</string>
+    <string name="capability_advanced_protection">Advanced Protection check</string>
+
+    <string name="capability_ready">Ready</string>
+    <string name="capability_not_built">Coming in a later build</string>
+    <string name="capability_fix">Fix</string>
+
+    <string name="action_grant_notifications">Allow notifications</string>
+    <string name="action_allow_exact_alarms">Allow alarms and reminders</string>
+    <string name="action_grant_dnd">Allow Do Not Disturb access</string>
+    <string name="action_allow_live_updates">Allow Live Updates</string>
+    <string name="action_turn_on_nfc">Turn on NFC</string>
+</resources>

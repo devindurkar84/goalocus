@@ -1,0 +1,31 @@
+# The study plan: 6 learning days a week (Sunday is review/mock day).
+# weekly_mix = how many of those 6 days each strand gets. Dates are inclusive, Monday → Sunday.
+# Source: product spec §6.3. Change the plan here, not in code.
+
+[[phases]]
+id = "foundations"
+name = "Phase 1 · Foundations"
+start = 2026-12-07
+end = 2027-01-10
+weekly_mix = { systems = 3, algorithms = 2, intelligence = 1 }
+
+[[phases]]
+id = "core"
+name = "Phase 2 · Core"
+start = 2027-01-11
+end = 2027-02-07
+weekly_mix = { systems = 2, algorithms = 2, intelligence = 2 }
+
+[[phases]]
+id = "interview-sprint"
+name = "Phase 3 · Interview sprint"
+start = 2027-02-08
+end = 2027-04-18
+weekly_mix = { systems = 2, algorithms = 1, intelligence = 3 }
+
+[[phases]]
+id = "notice-period"
+name = "Phase 4 · Notice period"
+start = 2027-04-19
+end = 2027-06-13
+weekly_mix = { systems = 2, algorithms = 1, intelligence = 3 }

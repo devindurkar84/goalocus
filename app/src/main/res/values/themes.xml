@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Only the window before Compose draws; colours come from GoalocusTheme. -->
+    <style name="Theme.Goalocus" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
