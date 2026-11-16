@@ -53,6 +53,8 @@ internal fun Project.configureKotlinJvm() {
 internal fun Project.addUnitTestDependencies() {
     dependencies {
         "testImplementation"(libs.findLibrary("kotlin-test").get())
+        // Explicit: the Kotlin plugin only infers the JUnit flavour (kotlin.test.Test) for JVM modules.
+        "testImplementation"(libs.findLibrary("kotlin-test-junit").get())
         "testImplementation"(libs.findLibrary("junit").get())
     }
 }
