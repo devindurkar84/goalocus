@@ -19,7 +19,7 @@ import javax.inject.Inject
 // change any of these in Settings while Goalocus is in the background.
 
 internal class NotificationsProbe @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : CapabilityProbe {
     // On Android 13+ this is also false until POST_NOTIFICATIONS is granted.
     override fun probe(): CapabilityStatus = if (NotificationManagerCompat.from(context).areNotificationsEnabled()) {
@@ -30,7 +30,7 @@ internal class NotificationsProbe @Inject constructor(
 }
 
 internal class ExactAlarmsProbe @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : CapabilityProbe {
     override fun probe(): CapabilityStatus {
         val alarms = context.getSystemService(AlarmManager::class.java)
@@ -40,7 +40,7 @@ internal class ExactAlarmsProbe @Inject constructor(
 
 /** AutomaticZenRule with device effects (grayscale, dim wallpaper) arrived in Android 15. */
 internal class FocusModesProbe @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : CapabilityProbe {
     override fun probe(): CapabilityStatus {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM) {
@@ -57,7 +57,7 @@ internal class FocusModesProbe @Inject constructor(
 
 /** Promoted ongoing notifications (Live Updates, shown in the Now Bar on One UI) arrived in Android 16. */
 internal class LiveUpdatesProbe @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : CapabilityProbe {
     override fun probe(): CapabilityStatus {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.BAKLAVA) {
@@ -78,7 +78,7 @@ internal class LiveUpdatesProbe @Inject constructor(
 }
 
 internal class NfcTriggerProbe @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : CapabilityProbe {
     override fun probe(): CapabilityStatus {
         val adapter = NfcAdapter.getDefaultAdapter(context) ?: return Unsupported("This phone has no NFC")

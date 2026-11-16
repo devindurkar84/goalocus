@@ -16,7 +16,7 @@ import javax.inject.Inject
  * so if the specific one can't be opened we fall back to Goalocus's app info page.
  */
 internal class SettingsLauncher @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
 ) : UserActionLauncher {
     override fun launch(action: UserAction) {
         val packageName = context.packageName
